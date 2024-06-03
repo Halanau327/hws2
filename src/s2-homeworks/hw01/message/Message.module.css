@@ -1,9 +1,13 @@
 .message {
-
+    display: flex;
+    justify-content: flex-end;
 }
 
 .imageAndText {
-
+    display: flex;
+    flex-direction: row-reverse;
+    width: 575px;
+    height: 77px;
 }
 
 .imageAndText img {
@@ -12,10 +16,12 @@
 }
 
 .text {
+
     width: 527px;
     height: 60px;
     box-shadow: 0 1px 2px 0 rgba(29, 33, 38, 0.1),0 5px 20px 0 rgba(29, 33, 38, 0.03);
     background: rgb(0, 102, 204);
+    border-radius: 10px;
 }
 
 .text:after {
@@ -23,16 +29,24 @@
 }
 
 .name {
+    display: flex;
+    justify-content: flex-end;
     color: rgb(255, 255, 255);
     font-family: Montserrat;
     font-size: 18px;
     font-weight: 600;
     line-height: 22px;
-    letter-spacing: 0%;
+
 }
 
 .messageText {
-
+    display: flex;
+    justify-content: flex-end;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
 }
 
 .time {
