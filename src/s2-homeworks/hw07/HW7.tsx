@@ -24,6 +24,7 @@ const HW7 = () => {
         <div id={'hw7'}>
             <div className={s2.hwTitle}>Homework #7</div>
 
+
             {/*демонстрация возможностей компонент:*/}
             <div className={s2.hw}>
                 <div className={s.container}>
