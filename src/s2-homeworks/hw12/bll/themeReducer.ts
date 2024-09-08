@@ -22,4 +22,3 @@ type changeThemeIdType = {
     type: 'SET_THEME_ID'
     id: number
 }
-

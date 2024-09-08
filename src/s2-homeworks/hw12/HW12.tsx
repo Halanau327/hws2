@@ -2,9 +2,10 @@ import React, {useEffect} from 'react'
 import s from './HW12.module.css'
 import s2 from '../../s1-main/App.module.css'
 import SuperSelect from '../hw07/common/c5-SuperSelect/SuperSelect'
-import { useDispatch, useSelector} from 'react-redux'
+import {TypedUseSelectorHook, useDispatch, useSelector} from 'react-redux'
 import {changeThemeId, initStateType, themeReducer} from './bll/themeReducer'
-
+import {applyMiddleware, combineReducers, legacy_createStore} from "redux";
+import {AppStoreType} from "../hw10/bll/store";
 
 
 /*
@@ -22,19 +23,16 @@ const themes = [
 ]
 
 const HW12 = () => {
-
-
     const dispatch = useDispatch()
 
 
+
     // взять ид темы из редакса
-    const themeId = useSelector((state: initStateType) => state.themeId)
+    const themeId = useSelector<AppStoreType>(state => state.theme.themeId)
     console.log(themeId)
 
     const change = (id: number) => { // дописать функцию
-
         dispatch(changeThemeId(id))
-
     }
 
     useEffect(() => {
